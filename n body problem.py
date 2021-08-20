@@ -230,7 +230,8 @@ if __name__== "__main__":
             print("okay, the program will now terminate")
             quit()
 
-    method = input("method (expl_euler, mpr, vvv): (default: mpr)") or "mpr"
+    method = input("""method (expl_euler, mpr, vvv): (default: Velocity Verlet) \n Verlet is the fastest method, the other ones are the explicit euler (does not conserve energy) and 
+                   the implicit midpoint rule, wich does conserve energy but is really slow""") or "vvv"
     translator = {
         "expl_euler": expl_euler,
         "mpr": impl_mpr,
